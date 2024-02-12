@@ -1,5 +1,10 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <set>
 
-//Optimized Approach - O(n^2 logn + nlogn) - o(n^2 logn) time and O(n) space
+using namespace std;
+
 class Solution {
 public:
     vector<vector<int>> threeSum(vector<int>& nums) {
@@ -28,3 +33,17 @@ public:
         return output;
     }
 };
+
+int main() {
+    Solution sol;
+    vector<int> nums = {-1, 0, 1, 2, -1, -4}; // Example input
+    vector<vector<int>> result = sol.threeSum(nums);
+    cout << "Triplets summing up to 0:" << endl;
+    for (const auto& triplet : result) {
+        for (int num : triplet) {
+            cout << num << " ";
+        }
+        cout << endl;
+    }
+    return 0;
+}
