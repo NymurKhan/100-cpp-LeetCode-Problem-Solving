@@ -1,3 +1,9 @@
+#include <iostream>
+#include <vector>
+#include <stack>
+
+using namespace std;
+
 class Solution {
 public:
     int largestRectangleArea(vector<int>& a) {
@@ -27,3 +33,11 @@ public:
         return area_max;
     }
 };
+
+int main() {
+    Solution sol;
+    vector<int> heights = {2,1,5,6,2,3}; // Example input
+    int result = sol.largestRectangleArea(heights);
+    cout << "Largest rectangle area: " << result << endl;
+    return 0;
+}

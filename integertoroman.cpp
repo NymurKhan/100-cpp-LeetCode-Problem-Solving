@@ -1,3 +1,8 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
 class Solution {
 public:
     string intToRoman(int num) {
@@ -9,3 +14,11 @@ public:
         return ths[num/1000] + hrns[(num%1000)/100] + tens[(num%100)/10] + ones[num%10];
     }
 };
+
+int main() {
+    Solution sol;
+    int num = 3549; // Example input
+    string result = sol.intToRoman(num);
+    cout << "Roman numeral equivalent of " << num << ": " << result << endl;
+    return 0;
+}

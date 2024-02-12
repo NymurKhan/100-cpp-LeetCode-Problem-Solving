@@ -1,3 +1,9 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
 class Solution {
 public:
     int maxArea(vector<int>& height) {
@@ -19,3 +25,11 @@ public:
         return maxArea;
     }
 };
+
+int main() {
+    Solution sol;
+    vector<int> height = {1, 8, 6, 2, 5, 4, 8, 3, 7}; // Example input
+    int result = sol.maxArea(height);
+    cout << "Maximum area of water: " << result << endl;
+    return 0;
+}

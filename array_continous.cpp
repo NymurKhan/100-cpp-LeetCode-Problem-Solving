@@ -1,3 +1,10 @@
+#include <iostream>
+#include <vector>
+#include <set>
+#include <algorithm>
+
+using namespace std;
+
 class Solution {
 public:
     int minOperations(vector<int>& nums) {
@@ -22,3 +29,11 @@ public:
         return ans;
     }
 };
+
+int main() {
+    Solution sol;
+    vector<int> nums = {1, 1, 2, 2, 3, 3}; // Example input
+    int result = sol.minOperations(nums);
+    cout << "Minimum operations required: " << result << endl;
+    return 0;
+}
